@@ -1,4 +1,4 @@
-Hi 👋 My name is Mohamed Sabith
+Hi 👋 I'm Mohamed Sabith
 ===============================
 
 I am a Self-taught Mern Stack Developer.
