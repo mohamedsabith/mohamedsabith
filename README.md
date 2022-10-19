@@ -7,7 +7,7 @@ Mern Stack Developer
 Hello, I'm Mohamed Sabith , I am self-taught Mern stack developer , highly motivated and extremely curious.
 
 * 🌍  I'm based in Malappuram 
-* 🖥️  See my portfolio at [Mohamed Sabith](https://mohamedsabith.in/)
+* 🖥️  See my portfolio at [Mohamed Sabith](https://chipper-brigadeiros-8cf6c0.netlify.app/)
 * 📫 How to reach me mohamedsabithmp@gmail.com
 * 🚀  I'm currently internship at Brototype
 * 🧠  I'm learning Data Structure and Algorithms
