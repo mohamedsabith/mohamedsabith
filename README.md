@@ -8,8 +8,8 @@ Hello, I'm Mohamed Sabith , I am self-taught Mern stack developer , highly motiv
 
 * 🌍  I'm based in Malappuram 
 * 🖥️  See my portfolio at [Mohamed Sabith](https://chipper-brigadeiros-8cf6c0.netlify.app/)
-* 📫 How to reach me mohamedsabithmp@gmail.com
-* 🚀  I'm currently Software developer at spericorn technology
+* 📫  How to reach me mohamedsabithmp@gmail.com
+* 🚀  I'm currently developer at spericorn technology
 * 🧠  I'm learning Data Structure and Algorithms
 
 ### Skills
