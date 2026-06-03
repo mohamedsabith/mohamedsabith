@@ -276,20 +276,10 @@ AI Engineering
 
 ---
 
-# 📈 GitHub Analytics
+## 📈 Contribution Activity
 
 <p align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=mohamedsabith&show_icons=true&theme=tokyonight&hide_border=true"/>
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohamedsabith&layout=compact&theme=tokyonight&hide_border=true"/>
-
-</p>
-
-<p align="center">
-
-<img src="https://streak-stats.demolab.com?user=mohamedsabith&theme=tokyonight&hide_border=true"/>
-
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mohamedsabith&theme=github-dark&hide_border=true" width="100%" />
 </p>
 
 ---
