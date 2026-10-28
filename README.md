@@ -56,12 +56,13 @@
   <img src="./assets/title-activity.svg" width="100%" alt="05 — Activity" />
 </picture>
 
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=mohamedsabith&show_icons=true&hide_border=true&hide_title=false&count_private=true&include_all_commits=true&bg_color=0B0D12&title_color=D4FF3A&text_color=8B93A7&icon_color=D4FF3A&ring_color=D4FF3A&border_radius=16" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohamedsabith&layout=compact&hide_border=true&langs_count=6&bg_color=0B0D12&title_color=D4FF3A&text_color=8B93A7&border_radius=16" alt="Top languages" />
-</p>
+<img src="https://raw.githubusercontent.com/mohamedsabith/mohamedsabith/output/stats.svg" width="100%" alt="GitHub stats — contributions, streaks, commits, pull requests and top languages" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mohamedsabith&bg_color=0B0D12&color=8B93A7&line=D4FF3A&point=F2F4F8&area=true&area_color=D4FF3A&hide_border=true&radius=16&custom_title=Contribution%20activity" width="100%" alt="Contribution graph" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mohamedsabith/mohamedsabith/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mohamedsabith/mohamedsabith/output/snake-light.svg" />
+  <img src="https://raw.githubusercontent.com/mohamedsabith/mohamedsabith/output/snake-dark.svg" width="100%" alt="Contribution graph animated as a snake" />
+</picture>
 
 <br />
 
