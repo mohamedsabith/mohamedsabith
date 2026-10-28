@@ -1,0 +1,188 @@
+name: Profile stats
+
+on:
+  schedule:
+    - cron: "17 */12 * * *"   # refresh twice a day
+  workflow_dispatch:           # lets you run it manually from the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate stats card
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOGIN: ${{ github.repository_owner }}
+        run: |
+          mkdir -p dist
+          node --input-type=module > dist/stats.svg <<'EOF'
+          const login = process.env.LOGIN;
+          const token = process.env.GH_TOKEN;
+
+          const query = `query($login: String!) {
+            user(login: $login) {
+              followers { totalCount }
+              repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
+                totalCount
+                nodes {
+                  stargazerCount
+                  languages(first: 10, orderBy: { field: SIZE, direction: DESC }) {
+                    edges { size node { name color } }
+                  }
+                }
+              }
+              contributionsCollection {
+                totalCommitContributions
+                totalPullRequestContributions
+                restrictedContributionsCount
+                contributionCalendar {
+                  totalContributions
+                  weeks { contributionDays { contributionCount date } }
+                }
+              }
+            }
+          }`;
+
+          let data;
+          if (process.env.MOCK) {
+            data = JSON.parse((await import("node:fs")).readFileSync(process.env.MOCK, "utf8"));
+          } else {
+            const res = await fetch("https://api.github.com/graphql", {
+              method: "POST",
+              headers: { Authorization: `bearer ${token}`, "Content-Type": "application/json", "User-Agent": "profile-stats" },
+              body: JSON.stringify({ query, variables: { login } }),
+            });
+            const json = await res.json();
+            if (!json.data || !json.data.user) {
+              console.error(JSON.stringify(json));
+              process.exit(1);
+            }
+            data = json.data.user;
+          }
+
+          const cc = data.contributionsCollection;
+          const days = cc.contributionCalendar.weeks.flatMap((w) => w.contributionDays);
+          const today = new Date().toISOString().slice(0, 10);
+
+          let longest = 0, run = 0;
+          for (const d of days) {
+            run = d.contributionCount > 0 ? run + 1 : 0;
+            longest = Math.max(longest, run);
+          }
+          let current = 0;
+          for (let i = days.length - 1; i >= 0; i--) {
+            if (days[i].contributionCount > 0) current++;
+            else if (days[i].date === today && current === 0) continue; // today not over yet
+            else break;
+          }
+
+          const stars = data.repositories.nodes.reduce((s, r) => s + r.stargazerCount, 0);
+          const langMap = new Map();
+          for (const r of data.repositories.nodes) {
+            for (const e of r.languages.edges) {
+              const cur = langMap.get(e.node.name) || { size: 0, color: e.node.color || "#8B93A7" };
+              cur.size += e.size;
+              langMap.set(e.node.name, cur);
+            }
+          }
+          const totalSize = [...langMap.values()].reduce((s, l) => s + l.size, 0) || 1;
+          let langs = [...langMap.entries()].sort((a, b) => b[1].size - a[1].size).slice(0, 6)
+            .map(([name, l]) => ({ name, color: l.color, pct: (l.size / totalSize) * 100 }));
+
+          const fmt = (n) => (n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "k" : n.toLocaleString("en-US"));
+          const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+          const tiles = [
+            [fmt(cc.contributionCalendar.totalContributions), "CONTRIBUTIONS · 1Y"],
+            [`${current}<tspan font-size="20" fill="#8B93A7"> d</tspan>`, "CURRENT STREAK"],
+            [`${longest}<tspan font-size="20" fill="#8B93A7"> d</tspan>`, "LONGEST STREAK"],
+            [fmt(cc.totalCommitContributions + cc.restrictedContributionsCount), "COMMITS · 1Y"],
+            [fmt(cc.totalPullRequestContributions), "PULL REQUESTS · 1Y"],
+            [fmt(data.repositories.totalCount), "PUBLIC REPOS"],
+          ];
+
+          const W = 1200, H = 340;
+          let out = "";
+          tiles.forEach(([v, label], i) => {
+            const col = i % 3, row = Math.floor(i / 3);
+            const x = 60 + col * 214, y = 120 + row * 110;
+            const accent = i === 1;
+            out += `<g class="rise" style="animation-delay:${(i * 0.08).toFixed(2)}s">
+              <text class="sans" x="${x}" y="${y}" font-size="44" font-weight="800" letter-spacing="-1.5" fill="${accent ? "#D4FF3A" : "#F2F4F8"}">${v}</text>
+              <text class="mono" x="${x + 2}" y="${y + 28}" font-size="11" letter-spacing="1.6" fill="#5A6275">${label}</text>
+            </g>`;
+          });
+
+          // languages
+          const LX = 760, LW = 380;
+          out += `<text class="mono" x="${LX}" y="78" font-size="12" letter-spacing="1.8" fill="#5A6275">TOP LANGUAGES</text>`;
+          out += `<clipPath id="bar"><rect x="${LX}" y="98" width="${LW}" height="10" rx="5"/></clipPath><g clip-path="url(#bar)"><rect x="${LX}" y="98" width="${LW}" height="10" fill="#1C2130"/>`;
+          let bx = LX;
+          for (const l of langs) {
+            const w = (l.pct / 100) * LW;
+            out += `<rect x="${bx.toFixed(1)}" y="98" width="${Math.max(w - 2, 0).toFixed(1)}" height="10" fill="${l.color}"/>`;
+            bx += w;
+          }
+          out += `</g>`;
+          langs.forEach((l, i) => {
+            const col = i % 2, row = Math.floor(i / 2);
+            const x = LX + col * 196, y = 152 + row * 46;
+            out += `<circle cx="${x + 5}" cy="${y - 5}" r="5" fill="${l.color}"/>
+            <text class="sans" x="${x + 20}" y="${y}" font-size="16" font-weight="500" fill="#DDE1EA">${esc(l.name)}</text>
+            <text class="mono" x="${x + 184}" y="${y}" font-size="13" fill="#8B93A7" text-anchor="end">${l.pct.toFixed(1)}%</text>`;
+          });
+
+          const updated = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase();
+
+          process.stdout.write(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" fill="none">
+          <style>
+            .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+            .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+            .rise { opacity:0; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+            @keyframes rise { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+          </style>
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" stroke="#151A24"/></pattern>
+            <radialGradient id="fade" cx="70%" cy="20%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <mask id="gm"><rect width="${W}" height="${H}" fill="url(#fade)"/></mask>
+            <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4FF3A" stop-opacity=".14"/><stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/></radialGradient>
+            <clipPath id="card"><rect width="${W}" height="${H}" rx="20"/></clipPath>
+          </defs>
+          <g clip-path="url(#card)">
+            <rect width="${W}" height="${H}" fill="#0B0D12"/>
+            <rect width="${W}" height="${H}" fill="url(#grid)" mask="url(#gm)" opacity=".7"/>
+            <circle cx="300" cy="0" r="300" fill="url(#glow)"/>
+            <text class="mono" x="60" y="62" font-size="12" letter-spacing="1.8" fill="#5A6275">// LAST 12 MONTHS</text>
+            <line x1="720" y1="48" x2="720" y2="${H - 48}" stroke="#1C2130"/>
+            ${out}
+            <text class="mono" x="1140" y="${H - 34}" font-size="11" letter-spacing="1.6" fill="#5A6275" text-anchor="end">AUTO-UPDATED · ${updated} <tspan fill="#D4FF3A">●</tspan></text>
+          </g>
+          <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="19.5" stroke="#1C2130"/>
+          </svg>`);
+          EOF
+
+      - name: Generate contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-dark.svg?color_snake=#D4FF3A&color_dots=#161B22,#2B3A10,#4F6E12,#8DB320,#D4FF3A
+            dist/snake-light.svg?color_snake=#5F7A00&color_dots=#EBEDF0,#DDF0A8,#B9DD5A,#8DB320,#5F7A00
+
+      - name: Publish to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "Update profile stats"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
