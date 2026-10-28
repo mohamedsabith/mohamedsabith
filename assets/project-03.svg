@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="300" viewBox="0 0 580 300" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" stroke="#151A24" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridmask"><rect width="580" height="300" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0.20"/>
+    <stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="card"><rect width="580" height="300" rx="20"/></clipPath>
+  
+</defs>
+<g clip-path="url(#card)">
+  <rect width="580" height="300" fill="#0B0D12"/>
+  <rect width="580" height="300" fill="url(#grid)" mask="url(#gridmask)" opacity=".7"/>
+<circle cx="540" cy="20" r="170" fill="url(#glow)" opacity=".7"/>
+<rect x="0" y="0" width="580" height="3" fill="#D4FF3A" opacity=".9"/>
+<text class="mono" x="36" y="56" font-size="14" fill="#D4FF3A">03</text>
+<text class="mono" x="70" y="56" font-size="12" letter-spacing="1.8" fill="#5A6275">/ BACKEND</text>
+<circle cx="524" cy="51" r="20" stroke="#2F3748" fill="#10131A"/>
+<path d="M518 57 L530 45 M521 45 H530 V54" stroke="#F2F4F8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="sans" x="36" y="130" font-size="32" font-weight="700" letter-spacing="-0.8" fill="#F2F4F8">Student Management API</text>
+<text class="sans" x="36" y="168" font-size="17" fill="#8B93A7">REST API for students, courses and</text>
+<text class="sans" x="36" y="194" font-size="17" fill="#8B93A7">attendance with role-based access.</text>
+<rect x="36" y="232" width="78" height="30" rx="8" fill="#151A24" stroke="#262D3D"/>
+<text class="mono" x="49" y="251" font-size="12.5" fill="#C9CEDA">Node.js</text>
+<rect x="122.5" y="232" width="78" height="30" rx="8" fill="#151A24" stroke="#262D3D"/>
+<text class="mono" x="135.5" y="251" font-size="12.5" fill="#C9CEDA">Express</text>
+<rect x="209.0" y="232" width="78" height="30" rx="8" fill="#151A24" stroke="#262D3D"/>
+<text class="mono" x="222.0" y="251" font-size="12.5" fill="#C9CEDA">MongoDB</text>
+</g>
+<rect x="0.5" y="0.5" width="579" height="299" rx="19.5" stroke="#1C2130"/>
+</svg>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="450" viewBox="0 0 1200 450" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" stroke="#151A24" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridmask"><rect width="1200" height="450" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0.20"/>
+    <stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="card"><rect width="1200" height="450" rx="20"/></clipPath>
+  
+</defs>
+<g clip-path="url(#card)">
+  <rect width="1200" height="450" fill="#0B0D12"/>
+  
+  <style>
+    .spin { animation: spin 40s linear infinite; transform-origin: 935px 222px; }
+    .spinr { animation: spin 60s linear infinite reverse; transform-origin: 935px 222px; }
+    .sweep { animation: spin 6s linear infinite; transform-origin: 935px 222px; }
+    @keyframes spin { to { transform: rotate(360deg) } }
+    .flow { animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset:-20 } }
+    .breathe { animation: breathe 3s ease-in-out infinite; transform-origin: 935px 222px; }
+    @keyframes breathe { 0%,100% { transform: scale(1); opacity:.5 } 50% { transform: scale(1.18); opacity:0 } }
+    .tw { animation: tw 3s ease-in-out infinite; }
+    @keyframes tw { 0%,100% { opacity:.15 } 50% { opacity:.9 } }
+  </style>
+  <defs>
+    <linearGradient id="aig" x1="60" x2="520" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D4FF3A"/><stop offset="1" stop-color="#5EEAD4"/>
+    </linearGradient>
+    <radialGradient id="aiglow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5EEAD4" stop-opacity=".16"/><stop offset=".6" stop-color="#D4FF3A" stop-opacity=".05"/><stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sw" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#5EEAD4" stop-opacity="0"/><stop offset="1" stop-color="#5EEAD4" stop-opacity=".22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="450" fill="url(#grid)" mask="url(#gridmask)"/>
+  <circle cx="935" cy="222" r="260" fill="url(#aiglow)"/>
+
+  <text class="mono" x="60" y="72" font-size="13" letter-spacing="2" fill="#5A6275">// AI-NATIVE WORKFLOW</text>
+  <text class="sans" x="58" y="132" font-size="44" font-weight="800" letter-spacing="-1.6" fill="#F2F4F8">Shipping faster with</text>
+  <text class="sans" x="58" y="184" font-size="44" font-weight="800" letter-spacing="-1.6" fill="url(#aig)">AI agents in the loop.</text>
+
+<text class="sans" x="60" y="230" font-size="16.5" fill="#8B93A7">I pair AI coding agents with solid engineering habits —</text>
+<text class="sans" x="60" y="256" font-size="16.5" fill="#8B93A7">agents draft, refactor and test; I design the architecture,</text>
+<text class="sans" x="60" y="282" font-size="16.5" fill="#8B93A7">review every change and own what ships to production.</text>
+<rect x="60" y="334" width="73" height="34" rx="8" fill="#10131A" stroke="#262D3D"><animate attributeName="stroke" values="#262D3D;#D4FF3A;#262D3D;#262D3D" keyTimes="0;.08;.25;1" dur="5s" begin="0s" repeatCount="indefinite"/></rect>
+<text class="mono" x="97" y="356" font-size="12" letter-spacing="1.2" fill="#C9CEDA" text-anchor="middle">PROMPT<animate attributeName="fill" values="#C9CEDA;#D4FF3A;#C9CEDA;#C9CEDA" keyTimes="0;.08;.25;1" dur="5s" begin="0s" repeatCount="indefinite"/></text>
+<line x1="137" y1="351" x2="159" y2="351" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="2 4" class="flow"/>
+<rect x="163.2" y="334" width="59" height="34" rx="8" fill="#10131A" stroke="#262D3D"><animate attributeName="stroke" values="#262D3D;#D4FF3A;#262D3D;#262D3D" keyTimes="0;.08;.25;1" dur="5s" begin="1s" repeatCount="indefinite"/></rect>
+<text class="mono" x="193" y="356" font-size="12" letter-spacing="1.2" fill="#C9CEDA" text-anchor="middle">PLAN<animate attributeName="fill" values="#C9CEDA;#D4FF3A;#C9CEDA;#C9CEDA" keyTimes="0;.08;.25;1" dur="5s" begin="1s" repeatCount="indefinite"/></text>
+<line x1="226" y1="351" x2="248" y2="351" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="2 4" class="flow"/>
+<rect x="252.0" y="334" width="66" height="34" rx="8" fill="#10131A" stroke="#262D3D"><animate attributeName="stroke" values="#262D3D;#D4FF3A;#262D3D;#262D3D" keyTimes="0;.08;.25;1" dur="5s" begin="2s" repeatCount="indefinite"/></rect>
+<text class="mono" x="285" y="356" font-size="12" letter-spacing="1.2" fill="#C9CEDA" text-anchor="middle">BUILD<animate attributeName="fill" values="#C9CEDA;#D4FF3A;#C9CEDA;#C9CEDA" keyTimes="0;.08;.25;1" dur="5s" begin="2s" repeatCount="indefinite"/></text>
+<line x1="322" y1="351" x2="344" y2="351" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="2 4" class="flow"/>
+<rect x="348.0" y="334" width="73" height="34" rx="8" fill="#10131A" stroke="#262D3D"><animate attributeName="stroke" values="#262D3D;#D4FF3A;#262D3D;#262D3D" keyTimes="0;.08;.25;1" dur="5s" begin="3s" repeatCount="indefinite"/></rect>
+<text class="mono" x="385" y="356" font-size="12" letter-spacing="1.2" fill="#C9CEDA" text-anchor="middle">REVIEW<animate attributeName="fill" values="#C9CEDA;#D4FF3A;#C9CEDA;#C9CEDA" keyTimes="0;.08;.25;1" dur="5s" begin="3s" repeatCount="indefinite"/></text>
+<line x1="425" y1="351" x2="447" y2="351" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="2 4" class="flow"/>
+<rect x="451.2" y="334" width="59" height="34" rx="8" fill="#10131A" stroke="#262D3D"><animate attributeName="stroke" values="#262D3D;#D4FF3A;#262D3D;#262D3D" keyTimes="0;.08;.25;1" dur="5s" begin="4s" repeatCount="indefinite"/></rect>
+<text class="mono" x="481" y="356" font-size="12" letter-spacing="1.2" fill="#C9CEDA" text-anchor="middle">SHIP<animate attributeName="fill" values="#C9CEDA;#D4FF3A;#C9CEDA;#C9CEDA" keyTimes="0;.08;.25;1" dur="5s" begin="4s" repeatCount="indefinite"/></text>
+<text class="mono" x="60" y="400" font-size="12" letter-spacing="1.5" fill="#5A6275">HUMAN JUDGEMENT <tspan fill="#D4FF3A">×</tspan> MACHINE SPEED</text>
+<circle cx="935" cy="222" r="72" stroke="#2A3142"/>
+<circle class="spin" cx="935" cy="222" r="118" stroke="#2A3142" stroke-dasharray="2 8"/>
+<circle class="spinr" cx="935" cy="222" r="166" stroke="#2A3142" stroke-dasharray="14 10"/>
+<path class="sweep" d="M935 222 L1101 222 A166 166 0 0 1 1058.4 333.1 Z" fill="url(#sw)" transform="rotate(0)"/>
+<path id="b0" d="M935.0 172.0 L935.0 78.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="0.00s" repeatCount="indefinite"><mpath href="#b0"/></animateMotion></circle>
+<rect x="890.6" y="40.0" width="89" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="906.6" cy="56.0" r="4" fill="#D97757"/>
+<text class="sans" x="918.6" y="61.0" font-size="14" font-weight="500" fill="#DDE1EA">Claude</text>
+<path id="b1" d="M978.3 197.0 L1059.7 150.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="0.37s" repeatCount="indefinite"><mpath href="#b1"/></animateMotion></circle>
+<rect x="1034.4" y="123.0" width="89" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="1050.4" cy="139.0" r="4" fill="#FFFFFF"/>
+<text class="sans" x="1062.4" y="144.0" font-size="14" font-weight="500" fill="#DDE1EA">Cursor</text>
+<path id="b2" d="M978.3 247.0 L1059.7 294.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="0.74s" repeatCount="indefinite"><mpath href="#b2"/></animateMotion></circle>
+<rect x="1038.5" y="289.0" width="81" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="1054.5" cy="305.0" r="4" fill="#10A37F"/>
+<text class="sans" x="1066.5" y="310.0" font-size="14" font-weight="500" fill="#DDE1EA">Codex</text>
+<path id="b3" d="M935.0 272.0 L935.0 366.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="1.11s" repeatCount="indefinite"><mpath href="#b3"/></animateMotion></circle>
+<rect x="886.6" y="372.0" width="97" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="902.6" cy="388.0" r="4" fill="#A78BFA"/>
+<text class="sans" x="914.6" y="393.0" font-size="14" font-weight="500" fill="#DDE1EA">Copilot</text>
+<path id="b4" d="M891.7 247.0 L810.3 294.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="1.48s" repeatCount="indefinite"><mpath href="#b4"/></animateMotion></circle>
+<rect x="742.8" y="289.0" width="97" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="758.8" cy="305.0" r="4" fill="#74AA9C"/>
+<text class="sans" x="770.8" y="310.0" font-size="14" font-weight="500" fill="#DDE1EA">ChatGPT</text>
+<path id="b5" d="M891.7 197.0 L810.3 150.0" stroke="#5EEAD4" stroke-opacity=".35" stroke-dasharray="2 6" class="flow"/>
+<circle r="2.8" fill="#5EEAD4"><animateMotion dur="2.2s" begin="1.85s" repeatCount="indefinite"><mpath href="#b5"/></animateMotion></circle>
+<rect x="759.1" y="123.0" width="64" height="32" rx="16" fill="#10131A" stroke="#2F3748"/>
+<circle cx="775.1" cy="139.0" r="4" fill="#D4FF3A"/>
+<text class="sans" x="787.1" y="144.0" font-size="14" font-weight="500" fill="#DDE1EA">MCP</text>
+<polygon class="breathe" points="935.0,168.0 981.8,195.0 981.8,249.0 935.0,276.0 888.2,249.0 888.2,195.0" stroke="#D4FF3A" fill="none"/>
+<polygon points="935.0,178.0 973.1,200.0 973.1,244.0 935.0,266.0 896.9,244.0 896.9,200.0" fill="#11170A" stroke="#D4FF3A" stroke-width="1.5"/>
+<text class="mono" x="935" y="220" font-size="18" font-weight="700" fill="#D4FF3A" text-anchor="middle">&lt;/&gt;</text>
+<text class="mono" x="935" y="238" font-size="9" letter-spacing="1.5" fill="#8B93A7" text-anchor="middle">MS · DEV</text>
+<circle class="tw" cx="890" cy="311" r="1.6" fill="#D4FF3A" style="animation-delay:0.2s"/>
+<circle class="tw" cx="811" cy="193" r="1" fill="#FFFFFF" style="animation-delay:0.6s"/>
+<circle class="tw" cx="1050" cy="291" r="1" fill="#D4FF3A" style="animation-delay:1.7s"/>
+<circle class="tw" cx="1078" cy="278" r="1" fill="#FFFFFF" style="animation-delay:1.9s"/>
+<circle class="tw" cx="1082" cy="172" r="1.2" fill="#D4FF3A" style="animation-delay:2.9s"/>
+<circle class="tw" cx="1118" cy="277" r="1.2" fill="#5EEAD4" style="animation-delay:0.4s"/>
+<circle class="tw" cx="1024" cy="303" r="1.6" fill="#D4FF3A" style="animation-delay:0.3s"/>
+<circle class="tw" cx="841" cy="177" r="1" fill="#FFFFFF" style="animation-delay:2.1s"/>
+<circle class="tw" cx="787" cy="159" r="1.2" fill="#FFFFFF" style="animation-delay:1.6s"/>
+<circle class="tw" cx="959" cy="84" r="1.2" fill="#5EEAD4" style="animation-delay:0.9s"/>
+<circle class="tw" cx="982" cy="58" r="1" fill="#D4FF3A" style="animation-delay:1.7s"/>
+<circle class="tw" cx="744" cy="191" r="1.6" fill="#5EEAD4" style="animation-delay:0.9s"/>
+<circle class="tw" cx="1030" cy="210" r="1.2" fill="#D4FF3A" style="animation-delay:2.3s"/>
+<circle class="tw" cx="1018" cy="339" r="1" fill="#FFFFFF" style="animation-delay:0.2s"/>
+<circle class="tw" cx="764" cy="157" r="1.2" fill="#5EEAD4" style="animation-delay:2.1s"/>
+<circle class="tw" cx="806" cy="135" r="1.2" fill="#D4FF3A" style="animation-delay:2.5s"/>
+<circle class="tw" cx="1068" cy="174" r="1.6" fill="#D4FF3A" style="animation-delay:0.2s"/>
+<circle class="tw" cx="886" cy="65" r="1.6" fill="#5EEAD4" style="animation-delay:0.9s"/>
+</g>
+<rect x="0.5" y="0.5" width="1199" height="449" rx="19.5" stroke="#1C2130"/>
+</svg>

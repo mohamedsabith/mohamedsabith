@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="80" viewBox="0 0 1200 80" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+
+  <line x1="60" y1="24" x2="1140" y2="24" stroke="#2A3142"/>
+  <text class="mono" x="60" y="56" font-size="12" letter-spacing="1.8" fill="#5A6275">© 2026 MOHAMED SABITH</text>
+  <text class="mono" x="1140" y="56" font-size="12" letter-spacing="1.8" fill="#5A6275" text-anchor="end">DESIGNED &amp; BUILT WITH CARE <tspan fill="#D4FF3A">●</tspan></text>
+
+</svg>

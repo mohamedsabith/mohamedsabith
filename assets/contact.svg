@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" stroke="#151A24" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridmask"><rect width="1200" height="300" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0.20"/>
+    <stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="card"><rect width="1200" height="300" rx="20"/></clipPath>
+  
+</defs>
+<g clip-path="url(#card)">
+  <rect width="1200" height="300" fill="#0B0D12"/>
+  
+  <style>
+    .caret { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity:0 } }
+  </style>
+  <rect width="1200" height="300" fill="url(#grid)" mask="url(#gridmask)"/>
+  <circle cx="600" cy="300" r="420" fill="url(#glow)"/>
+  <text class="mono" x="600" y="72" font-size="13" letter-spacing="2" fill="#5A6275" text-anchor="middle">// NEXT STEP</text>
+  <text class="sans" x="600" y="140" font-size="56" font-weight="800" letter-spacing="-2" fill="#F2F4F8" text-anchor="middle">Have a project in mind?</text>
+  <text class="sans" x="600" y="190" font-size="22" fill="#8B93A7" text-anchor="middle">Let's build something solid together.</text>
+  <text class="mono" x="586" y="246" font-size="18" fill="#D4FF3A" text-anchor="middle">mohamedsabithmp@gmail.com</text>
+  <rect class="caret" x="727" y="230" width="9" height="20" fill="#D4FF3A"/>
+
+</g>
+<rect x="0.5" y="0.5" width="1199" height="299" rx="19.5" stroke="#1C2130"/>
+</svg>

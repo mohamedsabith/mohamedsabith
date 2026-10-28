@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="60" viewBox="0 0 260 60" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" stroke="#151A24" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridmask"><rect width="260" height="60" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0.20"/>
+    <stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="card"><rect width="260" height="60" rx="14"/></clipPath>
+  
+</defs>
+<g clip-path="url(#card)">
+  <rect width="260" height="60" fill="#0B0D12"/>
+  
+  <rect width="260" height="60" fill="#10131A"/>
+  <circle cx="34" cy="30" r="8.5" stroke="#D4FF3A" stroke-width="1.6"/><path d="M25.5 30H42.5M34 21.5C31 25 31 35 34 38.5M34 21.5C37 25 37 35 34 38.5" stroke="#D4FF3A" stroke-width="1.6"/>
+  <text class="sans" x="58" y="36" font-size="17" font-weight="600" fill="#F2F4F8">Portfolio</text>
+  <path d="M222 35 L232 25 M225 25 H232 V32" stroke="#8B93A7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+</g>
+<rect x="0.5" y="0.5" width="259" height="59" rx="13.5" stroke="#1C2130"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+
+  <defs><linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#5F7A00" stop-opacity=".8"/><stop offset=".3" stop-color="#D0D7DE"/><stop offset="1" stop-color="#D0D7DE" stop-opacity="0"/></linearGradient></defs>
+  <text class="mono" x="60" y="70" font-size="15" fill="#5F7A00">05</text>
+  <text class="sans" x="112" y="72" font-size="32" font-weight="700" letter-spacing="-0.6" fill="#0B0D12">Activity</text>
+  <rect x="281" y="60" width="770" height="1" fill="url(#ln)"/>
+  <text class="mono" x="1140" y="65" font-size="12" letter-spacing="1.8" fill="#6B7280" text-anchor="end">ON GITHUB</text>
+
+</svg>

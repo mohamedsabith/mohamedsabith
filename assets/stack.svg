@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="582" viewBox="0 0 1200 582" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" stroke="#151A24" stroke-width="1"/>
+  </pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridmask"><rect width="1200" height="582" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0.20"/>
+    <stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="card"><rect width="1200" height="582" rx="20"/></clipPath>
+  
+</defs>
+<g clip-path="url(#card)">
+  <rect width="1200" height="582" fill="#0B0D12"/>
+  <text class="mono" x="60" y="82" font-size="12" letter-spacing="1.8" fill="#5A6275">LANGUAGES</text>
+<rect x="300" y="60" width="136" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="78" r="4.5" fill="#F7DF1E"/>
+<text class="sans" x="334" y="83" font-size="15" font-weight="500" fill="#DDE1EA">JavaScript</text>
+<rect x="448.0" y="60" width="136" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="468.0" cy="78" r="4.5" fill="#3178C6"/>
+<text class="sans" x="482.0" y="83" font-size="15" font-weight="500" fill="#DDE1EA">TypeScript</text>
+<rect x="596.0" y="60" width="77" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="616.0" cy="78" r="4.5" fill="#E38C00"/>
+<text class="sans" x="630.0" y="83" font-size="15" font-weight="500" fill="#DDE1EA">SQL</text>
+<rect x="685.2" y="60" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="705.2" cy="78" r="4.5" fill="#E34F26"/>
+<text class="sans" x="719.2" y="83" font-size="15" font-weight="500" fill="#DDE1EA">HTML5</text>
+<rect x="791.2" y="60" width="86" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="811.2" cy="78" r="4.5" fill="#2965F1"/>
+<text class="sans" x="825.2" y="83" font-size="15" font-weight="500" fill="#DDE1EA">CSS3</text>
+<line x1="60" y1="122" x2="1140" y2="122" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="144" font-size="12" letter-spacing="1.8" fill="#5A6275">BACKEND</text>
+<rect x="300" y="122" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="140" r="4.5" fill="#5FA04E"/>
+<text class="sans" x="334" y="145" font-size="15" font-weight="500" fill="#DDE1EA">Node.js</text>
+<rect x="422.8" y="122" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="442.8" cy="140" r="4.5" fill="#E0234E"/>
+<text class="sans" x="456.8" y="145" font-size="15" font-weight="500" fill="#DDE1EA">NestJS</text>
+<rect x="537.2" y="122" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="557.2" cy="140" r="4.5" fill="#FFFFFF"/>
+<text class="sans" x="571.2" y="145" font-size="15" font-weight="500" fill="#DDE1EA">Express</text>
+<rect x="660.0" y="122" width="128" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="680.0" cy="140" r="4.5" fill="#8B93A7"/>
+<text class="sans" x="694.0" y="145" font-size="15" font-weight="500" fill="#DDE1EA">REST APIs</text>
+<rect x="799.6" y="122" width="136" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="819.6" cy="140" r="4.5" fill="#8B93A7"/>
+<text class="sans" x="833.6" y="145" font-size="15" font-weight="500" fill="#DDE1EA">WebSockets</text>
+<line x1="60" y1="184" x2="1140" y2="184" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="206" font-size="12" letter-spacing="1.8" fill="#5A6275">FRONTEND · MOBILE</text>
+<rect x="300" y="184" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="202" r="4.5" fill="#FFFFFF"/>
+<text class="sans" x="334" y="207" font-size="15" font-weight="500" fill="#DDE1EA">Next.js</text>
+<rect x="422.8" y="184" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="442.8" cy="202" r="4.5" fill="#61DAFB"/>
+<text class="sans" x="456.8" y="207" font-size="15" font-weight="500" fill="#DDE1EA">React</text>
+<rect x="528.8" y="184" width="153" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="548.8" cy="202" r="4.5" fill="#61DAFB"/>
+<text class="sans" x="562.8" y="207" font-size="15" font-weight="500" fill="#DDE1EA">React Native</text>
+<rect x="693.5999999999999" y="184" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="713.5999999999999" cy="202" r="4.5" fill="#764ABC"/>
+<text class="sans" x="727.5999999999999" y="207" font-size="15" font-weight="500" fill="#DDE1EA">Redux</text>
+<rect x="799.5999999999999" y="184" width="153" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="819.5999999999999" cy="202" r="4.5" fill="#38BDF8"/>
+<text class="sans" x="833.5999999999999" y="207" font-size="15" font-weight="500" fill="#DDE1EA">Tailwind CSS</text>
+<line x1="60" y1="246" x2="1140" y2="246" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="268" font-size="12" letter-spacing="1.8" fill="#5A6275">DATABASES</text>
+<rect x="300" y="246" width="136" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="264" r="4.5" fill="#4169E1"/>
+<text class="sans" x="334" y="269" font-size="15" font-weight="500" fill="#DDE1EA">PostgreSQL</text>
+<rect x="448.0" y="246" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="468.0" cy="264" r="4.5" fill="#F29111"/>
+<text class="sans" x="482.0" y="269" font-size="15" font-weight="500" fill="#DDE1EA">MySQL</text>
+<rect x="554.0" y="246" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="574.0" cy="264" r="4.5" fill="#47A248"/>
+<text class="sans" x="588.0" y="269" font-size="15" font-weight="500" fill="#DDE1EA">MongoDB</text>
+<rect x="676.8" y="246" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="696.8" cy="264" r="4.5" fill="#FF4438"/>
+<text class="sans" x="710.8" y="269" font-size="15" font-weight="500" fill="#DDE1EA">Redis</text>
+<line x1="60" y1="308" x2="1140" y2="308" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="330" font-size="12" letter-spacing="1.8" fill="#5A6275">INTEGRATIONS</text>
+<rect x="300" y="308" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="326" r="4.5" fill="#635BFF"/>
+<text class="sans" x="334" y="331" font-size="15" font-weight="500" fill="#DDE1EA">Stripe</text>
+<rect x="414.4" y="308" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="434.4" cy="326" r="4.5" fill="#F22F46"/>
+<text class="sans" x="448.4" y="331" font-size="15" font-weight="500" fill="#DDE1EA">Twilio</text>
+<rect x="528.8" y="308" width="128" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="548.8" cy="326" r="4.5" fill="#005FFF"/>
+<text class="sans" x="562.8" y="331" font-size="15" font-weight="500" fill="#DDE1EA">GetStream</text>
+<rect x="668.4" y="308" width="128" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="688.4" cy="326" r="4.5" fill="#D52E63"/>
+<text class="sans" x="702.4" y="331" font-size="15" font-weight="500" fill="#DDE1EA">Typesense</text>
+<line x1="60" y1="370" x2="1140" y2="370" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="392" font-size="12" letter-spacing="1.8" fill="#5A6275">AI · CODING AGENTS</text>
+<rect x="300" y="370" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="388" r="4.5" fill="#D97757"/>
+<text class="sans" x="334" y="393" font-size="15" font-weight="500" fill="#DDE1EA">Claude</text>
+<rect x="414.4" y="370" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="434.4" cy="388" r="4.5" fill="#FFFFFF"/>
+<text class="sans" x="448.4" y="393" font-size="15" font-weight="500" fill="#DDE1EA">Cursor</text>
+<rect x="528.8" y="370" width="153" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="548.8" cy="388" r="4.5" fill="#10A37F"/>
+<text class="sans" x="562.8" y="393" font-size="15" font-weight="500" fill="#DDE1EA">OpenAI Codex</text>
+<rect x="693.5999999999999" y="370" width="170" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="713.5999999999999" cy="388" r="4.5" fill="#A78BFA"/>
+<text class="sans" x="727.5999999999999" y="393" font-size="15" font-weight="500" fill="#DDE1EA">GitHub Copilot</text>
+<rect x="875.1999999999999" y="370" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="895.1999999999999" cy="388" r="4.5" fill="#74AA9C"/>
+<text class="sans" x="909.1999999999999" y="393" font-size="15" font-weight="500" fill="#DDE1EA">ChatGPT</text>
+<rect x="998.0" y="370" width="77" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="1018.0" cy="388" r="4.5" fill="#D4FF3A"/>
+<text class="sans" x="1032.0" y="393" font-size="15" font-weight="500" fill="#DDE1EA">MCP</text>
+<line x1="60" y1="432" x2="1140" y2="432" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="454" font-size="12" letter-spacing="1.8" fill="#5A6275">AI ENGINEERING</text>
+<rect x="300" y="432" width="119" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="450" r="4.5" fill="#5EEAD4"/>
+<text class="sans" x="334" y="455" font-size="15" font-weight="500" fill="#DDE1EA">LLM APIs</text>
+<rect x="431.2" y="432" width="128" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="451.2" cy="450" r="4.5" fill="#5EEAD4"/>
+<text class="sans" x="465.2" y="455" font-size="15" font-weight="500" fill="#DDE1EA">AI Agents</text>
+<rect x="570.8" y="432" width="77" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="590.8" cy="450" r="4.5" fill="#5EEAD4"/>
+<text class="sans" x="604.8" y="455" font-size="15" font-weight="500" fill="#DDE1EA">RAG</text>
+<rect x="660.0" y="432" width="161" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="680.0" cy="450" r="4.5" fill="#5EEAD4"/>
+<text class="sans" x="694.0" y="455" font-size="15" font-weight="500" fill="#DDE1EA">Vector Search</text>
+<rect x="833.2" y="432" width="161" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="853.2" cy="450" r="4.5" fill="#5EEAD4"/>
+<text class="sans" x="867.2" y="455" font-size="15" font-weight="500" fill="#DDE1EA">Prompt Design</text>
+<line x1="60" y1="494" x2="1140" y2="494" stroke="#1C2130" stroke-opacity=".7"/>
+<text class="mono" x="60" y="516" font-size="12" letter-spacing="1.8" fill="#5A6275">TOOLS</text>
+<rect x="300" y="494" width="77" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="320" cy="512" r="4.5" fill="#F05032"/>
+<text class="sans" x="334" y="517" font-size="15" font-weight="500" fill="#DDE1EA">Git</text>
+<rect x="389.2" y="494" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="409.2" cy="512" r="4.5" fill="#FFFFFF"/>
+<text class="sans" x="423.2" y="517" font-size="15" font-weight="500" fill="#DDE1EA">GitHub</text>
+<rect x="503.6" y="494" width="102" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="523.6" cy="512" r="4.5" fill="#2496ED"/>
+<text class="sans" x="537.6" y="517" font-size="15" font-weight="500" fill="#DDE1EA">Docker</text>
+<rect x="618.0" y="494" width="111" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="638.0" cy="512" r="4.5" fill="#FF6C37"/>
+<text class="sans" x="652.0" y="517" font-size="15" font-weight="500" fill="#DDE1EA">Postman</text>
+<rect x="740.8" y="494" width="94" height="36" rx="18" fill="#10131A" stroke="#232A3A"/>
+<circle cx="760.8" cy="512" r="4.5" fill="#F24E1E"/>
+<text class="sans" x="774.8" y="517" font-size="15" font-weight="500" fill="#DDE1EA">Figma</text>
+</g>
+<rect x="0.5" y="0.5" width="1199" height="581" rx="19.5" stroke="#1C2130"/>
+</svg>

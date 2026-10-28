@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" fill="none">
+
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+</style>
+
+  <defs><linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#D4FF3A" stop-opacity=".8"/><stop offset=".3" stop-color="#2A3142"/><stop offset="1" stop-color="#2A3142" stop-opacity="0"/></linearGradient></defs>
+  <text class="mono" x="60" y="70" font-size="15" fill="#D4FF3A">01</text>
+  <text class="sans" x="112" y="72" font-size="32" font-weight="700" letter-spacing="-0.6" fill="#F2F4F8">About</text>
+  <rect x="228" y="60" width="830" height="1" fill="url(#ln)"/>
+  <text class="mono" x="1140" y="65" font-size="12" letter-spacing="1.8" fill="#5A6275" text-anchor="end">WHO I AM</text>
+
+</svg>
