@@ -3,10 +3,10 @@
 </a>
 
 <p align="center">
-  <a href="https://mohamed-sabith.netlify.app/"><img src="./assets/btn-portfolio.svg" height="48" alt="Portfolio" /></a>&nbsp;
-  <a href="https://www.linkedin.com/in/mohamed-sabith-mp"><img src="./assets/btn-linkedin.svg" height="48" alt="LinkedIn" /></a>&nbsp;
-  <a href="https://github.com/mohamedsabith"><img src="./assets/btn-github.svg" height="48" alt="GitHub" /></a>&nbsp;
-  <a href="mailto:mohamedsabithmp@gmail.com"><img src="./assets/btn-email.svg" height="48" alt="Email" /></a>
+  <a href="https://mohamed-sabith.netlify.app/"><img src="./assets/btn-portfolio.svg" width="23%" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/mohamed-sabith-mp"><img src="./assets/btn-linkedin.svg" width="23%" alt="LinkedIn" /></a>
+  <a href="https://github.com/mohamedsabith"><img src="./assets/btn-github.svg" width="23%" alt="GitHub" /></a>
+  <a href="mailto:mohamedsabithmp@gmail.com"><img src="./assets/btn-email.svg" width="23%" alt="Email" /></a>
 </p>
 
 <br />
