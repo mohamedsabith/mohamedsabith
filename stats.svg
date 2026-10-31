@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none">
+<style>
+  .sans { font-family: 'Inter Display','Inter','Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif; }
+  .mono { font-family: 'JetBrains Mono','SF Mono','Cascadia Code',Consolas,'DejaVu Sans Mono',Menlo,monospace; }
+  .rise { opacity:0; animation: rise .8s cubic-bezier(.2,.7,.2,1) forwards; }
+  @keyframes rise { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+</style>
+<defs>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" stroke="#151A24"/></pattern>
+  <radialGradient id="fade" cx="70%" cy="20%" r="80%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <mask id="gm"><rect width="1200" height="340" fill="url(#fade)"/></mask>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#D4FF3A" stop-opacity=".14"/><stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/></radialGradient>
+  <clipPath id="card"><rect width="1200" height="340" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#card)">
+  <rect width="1200" height="340" fill="#0B0D12"/>
+  <rect width="1200" height="340" fill="url(#grid)" mask="url(#gm)" opacity=".7"/>
+  <circle cx="300" cy="0" r="300" fill="url(#glow)"/>
+  <text class="mono" x="60" y="62" font-size="12" letter-spacing="1.8" fill="#5A6275">// LAST 12 MONTHS</text>
+  <line x1="720" y1="48" x2="720" y2="292" stroke="#1C2130"/>
+  <g class="rise" style="animation-delay:0.00s">
+    <text class="sans" x="60" y="120" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#F2F4F8">72</text>
+    <text class="mono" x="62" y="148" font-size="11" letter-spacing="1.6" fill="#5A6275">CONTRIBUTIONS · 1Y</text>
+  </g><g class="rise" style="animation-delay:0.08s">
+    <text class="sans" x="274" y="120" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#D4FF3A">4<tspan font-size="20" fill="#8B93A7"> d</tspan></text>
+    <text class="mono" x="276" y="148" font-size="11" letter-spacing="1.6" fill="#5A6275">CURRENT STREAK</text>
+  </g><g class="rise" style="animation-delay:0.16s">
+    <text class="sans" x="488" y="120" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#F2F4F8">4<tspan font-size="20" fill="#8B93A7"> d</tspan></text>
+    <text class="mono" x="490" y="148" font-size="11" letter-spacing="1.6" fill="#5A6275">LONGEST STREAK</text>
+  </g><g class="rise" style="animation-delay:0.24s">
+    <text class="sans" x="60" y="230" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#F2F4F8">71</text>
+    <text class="mono" x="62" y="258" font-size="11" letter-spacing="1.6" fill="#5A6275">COMMITS · 1Y</text>
+  </g><g class="rise" style="animation-delay:0.32s">
+    <text class="sans" x="274" y="230" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#F2F4F8">0</text>
+    <text class="mono" x="276" y="258" font-size="11" letter-spacing="1.6" fill="#5A6275">PULL REQUESTS · 1Y</text>
+  </g><g class="rise" style="animation-delay:0.40s">
+    <text class="sans" x="488" y="230" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#F2F4F8">30</text>
+    <text class="mono" x="490" y="258" font-size="11" letter-spacing="1.6" fill="#5A6275">PUBLIC REPOS</text>
+  </g><text class="mono" x="760" y="78" font-size="12" letter-spacing="1.8" fill="#5A6275">TOP LANGUAGES</text><clipPath id="bar"><rect x="760" y="98" width="380" height="10" rx="5"/></clipPath><g clip-path="url(#bar)"><rect x="760" y="98" width="380" height="10" fill="#1C2130"/><rect x="760.0" y="98" width="144.7" height="10" fill="#663399"/><rect x="906.7" y="98" width="106.4" height="10" fill="#e34c26"/><rect x="1015.1" y="98" width="90.5" height="10" fill="#f1e05a"/><rect x="1107.6" y="98" width="20.1" height="10" fill="#f7931e"/><rect x="1129.6" y="98" width="4.2" height="10" fill="#3178c6"/><rect x="1135.8" y="98" width="0.6" height="10" fill="#41b883"/></g><circle cx="765" cy="147" r="5" fill="#663399"/>
+  <text class="sans" x="780" y="152" font-size="16" font-weight="500" fill="#DDE1EA">CSS</text>
+  <text class="mono" x="944" y="152" font-size="13" fill="#8B93A7" text-anchor="end">38.6%</text><circle cx="961" cy="147" r="5" fill="#e34c26"/>
+  <text class="sans" x="976" y="152" font-size="16" font-weight="500" fill="#DDE1EA">HTML</text>
+  <text class="mono" x="1140" y="152" font-size="13" fill="#8B93A7" text-anchor="end">28.5%</text><circle cx="765" cy="193" r="5" fill="#f1e05a"/>
+  <text class="sans" x="780" y="198" font-size="16" font-weight="500" fill="#DDE1EA">JavaScript</text>
+  <text class="mono" x="944" y="198" font-size="13" fill="#8B93A7" text-anchor="end">24.3%</text><circle cx="961" cy="193" r="5" fill="#f7931e"/>
+  <text class="sans" x="976" y="198" font-size="16" font-weight="500" fill="#DDE1EA">Handlebars</text>
+  <text class="mono" x="1140" y="198" font-size="13" fill="#8B93A7" text-anchor="end">5.8%</text><circle cx="765" cy="239" r="5" fill="#3178c6"/>
+  <text class="sans" x="780" y="244" font-size="16" font-weight="500" fill="#DDE1EA">TypeScript</text>
+  <text class="mono" x="944" y="244" font-size="13" fill="#8B93A7" text-anchor="end">1.6%</text><circle cx="961" cy="239" r="5" fill="#41b883"/>
+  <text class="sans" x="976" y="244" font-size="16" font-weight="500" fill="#DDE1EA">Vue</text>
+  <text class="mono" x="1140" y="244" font-size="13" fill="#8B93A7" text-anchor="end">0.7%</text>
+  <text class="mono" x="1140" y="306" font-size="11" letter-spacing="1.6" fill="#5A6275" text-anchor="end">AUTO-UPDATED · 31 OCT 2026 <tspan fill="#D4FF3A">●</tspan></text>
+</g>
+<rect x=".5" y=".5" width="1199" height="339" rx="19.5" stroke="#1C2130"/>
+</svg>
